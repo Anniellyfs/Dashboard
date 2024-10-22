@@ -33,8 +33,13 @@ if 'Unnamed: 1' in df.columns and 'Unnamed: 4' in df.columns:
         'Qtd_Batismo_Esp_Santo', 'Qtd_Motos', 'Qtd_Carros'
     ]
 
+    # Especificar o formato da data ao fazer a conversão
+    try:
+        df['Data'] = pd.to_datetime(df['Data'], format='%d/%m/%Y', errors='coerce')
+    except Exception as e:
+        print(f"Erro ao converter a coluna Data: {e}")
+    
     # Extrair o ano e o mês da coluna 'Data'
-    df['Data'] = pd.to_datetime(df['Data'], format='%d/%m/%Y', errors='coerce')  # Especifica o formato da data
     df['Ano'] = df['Data'].dt.year
     df['Mes'] = df['Data'].dt.month
 
