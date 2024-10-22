@@ -34,7 +34,7 @@ if 'Unnamed: 1' in df.columns and 'Unnamed: 4' in df.columns:
     ]
 
     # Extrair o ano e o mês da coluna 'Data'
-    df['Data'] = pd.to_datetime(df['Data'], errors='coerce')
+    df['Data'] = pd.to_datetime(df['Data'], format='%d/%m/%Y', errors='coerce')  # Especifica o formato da data
     df['Ano'] = df['Data'].dt.year
     df['Mes'] = df['Data'].dt.month
 
