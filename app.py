@@ -4,7 +4,7 @@ import pandas as pd
 import plotly.graph_objs as go
 
 # Definir o caminho do arquivo Excel
-file_path = r'C:\Users\annie\OneDrive\Documentos\Dashboard\arquivo.xlsx'
+file_path = 'arquivo.xlsx'
 
 # Criar a aplicação Dash
 app = dash.Dash(__name__)
