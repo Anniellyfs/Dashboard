@@ -1,1 +1,1 @@
-web: python nome_do_seu_arquivo.py
+web: python app.py
