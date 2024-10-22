@@ -139,4 +139,5 @@ def atualizar_graficos(ano_selecionado):
     return fig_frequencia, fig_media_pessoas, fig_media_visitantes, ""
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=True, host='0.0.0.0', port=8080)
+
